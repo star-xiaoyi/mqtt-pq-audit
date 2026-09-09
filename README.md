@@ -39,3 +39,5 @@ python experiments/run_stage4_protocol.py --mode quick
 ```
 
 Use `--mode full` for the complete experiment profile. Run it from a clean Git worktree.
+
+Generated artifacts use the implementation label A6 for construction A5 in the paper.
