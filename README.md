@@ -8,26 +8,6 @@ Experiment code for *Offline Auditability in MQTT: Semantic Boundaries and Post-
 - Python 3.12.13
 - CMake 3.20 or newer and a C++17 compiler
 - OpenSSL and Mosquitto 2.0.x
-- liboqs 0.16.0 and liboqs-python at commit `35eceb69d2b363cb0421085cf1ae1c682dee1acc`
-
-```bash
-conda create -n firstpaper python=3.12.13 -y
-conda activate firstpaper
-python -m pip install -r experiments/requirements.txt
-
-git clone --branch 0.16.0 --depth 1 https://github.com/open-quantum-safe/liboqs.git build/liboqs
-cmake -S build/liboqs -B build/liboqs/build \
-  -DCMAKE_BUILD_TYPE=Release \
-  -DCMAKE_INSTALL_PREFIX="$PWD/build/liboqs-install" \
-  -DBUILD_SHARED_LIBS=ON -DOQS_BUILD_ONLY_LIB=ON \
-  -DOQS_MINIMAL_BUILD='KEM_ml_kem_768;SIG_ml_dsa_65;SIG_slh_dsa_pure_sha2_128f'
-cmake --build build/liboqs/build -j
-cmake --install build/liboqs/build
-
-git clone https://github.com/open-quantum-safe/liboqs-python.git build/liboqs-python
-git -C build/liboqs-python checkout 35eceb69d2b363cb0421085cf1ae1c682dee1acc
-OQS_INSTALL_PATH="$PWD/build/liboqs-install" python -m pip install ./build/liboqs-python
-```
 
 ## Run
 
