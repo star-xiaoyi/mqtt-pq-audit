@@ -1,0 +1,2 @@
+# Test-only lock. Runtime/measurement dependencies are in requirements.txt.
+pytest==8.4.1

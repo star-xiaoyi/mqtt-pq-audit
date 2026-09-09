@@ -1,0 +1,11 @@
+build/
+experiments/cpp/build/
+experiments/results/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+.idea/
+.vscode/
+.DS_Store
+*:Zone.Identifier
